@@ -95,10 +95,12 @@ class LoginWithPassword(viewsets.ViewSet):
             return create_response(
                 status=status.HTTP_200_OK,
                 message="User Logged in Successfully",
-                result={"access_token":token['access']}
+                result={"access_token":token['access'],"refresh_token":token['refresh']}
             )
 
         except Exception as e:
+                import traceback
+                traceback.print_exc()
                 return create_response(
                     status=status.HTTP_500_INTERNAL_SERVER_ERROR,
                     message=f"Exception : {e}"

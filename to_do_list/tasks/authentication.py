@@ -6,6 +6,9 @@ from utils.global_utils import create_response
 def get_tokens_for_user(user):
     refresh = RefreshToken.for_user(user)
 
+    refresh['user_id'] = str(user.id)
+    refresh['username'] = user.username
+
     return {
         'user_id': user.id,
         'username': user.username,
@@ -22,6 +25,7 @@ def get_access_token_from_refresh(refresh_token_str):
         new_access_token = str(refresh.access_token)
         
         return {
+            'refresh':str(refresh),
             'access': new_access_token,
             'refresh_valid': True
         }
