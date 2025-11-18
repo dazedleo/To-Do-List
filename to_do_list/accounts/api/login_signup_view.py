@@ -72,7 +72,6 @@ class LoginWithPassword(viewsets.ViewSet):
         try:
             email = request.data.get("email")
             password = request.data.get("password")
-            refresh = request.data.get("refresh")
 
             user_obj = User.objects.filter(email=email).first()
             if not user_obj:
@@ -87,10 +86,7 @@ class LoginWithPassword(viewsets.ViewSet):
                     message="Invalid Password"
                 )
             
-            token = get_access_token_from_refresh(refresh)
-
-            if not token['refresh_valid']:
-                token = get_tokens_for_user(user_obj)
+            token = get_tokens_for_user(user_obj)
             
             return create_response(
                 status=status.HTTP_200_OK,

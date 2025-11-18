@@ -7,8 +7,7 @@ def get_tokens_for_user(user):
     refresh = RefreshToken.for_user(user)
 
     refresh['user_id'] = str(user.id)
-    refresh['username'] = user.username
-
+    refresh.access_token['user_id'] = str(user.id)
     return {
         'user_id': user.id,
         'username': user.username,

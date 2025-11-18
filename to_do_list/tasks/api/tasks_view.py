@@ -6,23 +6,24 @@ from utils.global_utils import create_response
 
 from tasks.serializers import TaskListSerializer, TaskCreateSerializer
 from tasks.models import task
+from accounts.models import User
 
 from datetime import date, timedelta, datetime
 
 class TaskView(viewsets.ViewSet):
-    # permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
 
     def create(self, request):
 
-        data = request.data.copy()
-        data["user"] = request.user.id
-        title = data.get('title')
-        due_date = data.get('due_date')
+        title = request.data.get('title')
+        due_date = request.data.get('due_date')
 
-        if task.objects.filter(title=title).exists():
+        request.data['user'] = request.user.id
+
+        if task.objects.filter(title=title, user=request.user).exists():
             return create_response(
                 status = http_status.HTTP_400_BAD_REQUEST,
-                message="Task Already exists."
+                message=f"Task {title} already exists."
             )
         
         if due_date:
