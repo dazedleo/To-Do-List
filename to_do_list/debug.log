@@ -2832,3 +2832,9 @@ Not Found: /api/tasks/destroy-task/
 "GET //api/tasks/list-of-task/?status=all HTTP/1.1" 200 617
 D:\To-Do-List\to_do_list\tasks\api\tasks_view.py changed, reloading.
 Watching for file changes with StatReloader
+"OPTIONS //api/tasks/retrieve-task/?task_id=c5d25a41-8521-438c-a738-bf08ad43cce5 HTTP/1.1" 200 0
+"GET //api/tasks/retrieve-task/?task_id=c5d25a41-8521-438c-a738-bf08ad43cce5 HTTP/1.1" 200 204
+"OPTIONS //api/tasks/destroy-task/?task_id=c5d25a41-8521-438c-a738-bf08ad43cce5 HTTP/1.1" 200 0
+"DELETE //api/tasks/destroy-task/?task_id=c5d25a41-8521-438c-a738-bf08ad43cce5 HTTP/1.1" 204 75
+"OPTIONS //api/tasks/list-of-task/?status=all HTTP/1.1" 200 0
+"GET //api/tasks/list-of-task/?status=all HTTP/1.1" 200 482
