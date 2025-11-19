@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>To-Do List App</title>
+<link rel="stylesheet" href="{% static 'index.css' %}" media="print" onload="this.media='all'">
+</head>
+<body>
+
+<div id="app" class="container">
+  <!-- Pages rendered dynamically -->
+  <!-- <h1>Welcome to Your To-Do List App</h1>
+  <p>Stay organized and track your tasks efficiently.</p>
+  <div class="button-group">
+    <button id="signupBtn" class="btn btn-primary">Sign Up</button>
+    <button id="loginBtn" class="btn btn-secondary">Login</button> -->
+</div>
+
+<script src="{% static 'index.js' %}" defer></script>
+</body>
+</html>
