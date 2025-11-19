@@ -123,30 +123,29 @@ class TaskView(viewsets.ViewSet):
                 status=http_status.HTTP_404_NOT_FOUND,
                 message="Task not found."
             )
+        
+        except Exception as e:
+            logger.error("Exception on task retrieve for user_id=%s: %s", request.user.id, e, exc_info=True)
+            return create_response(
+                status=http_status.HTTP_500_INTERNAL_SERVER_ERROR,
+                message=f"Exception error : {e}"
+            )
 
     def update(self, request):
         try:
             id = request.query_params.get('task_id')
             logger.info("Update task request task_id=%s by user_id=%s with data=%s", id, request.user.id, request.data)
             task_obj = task.objects.get(id=id, user=request.user, is_deleted=False)
-        except task.DoesNotExist:
-            logger.warning("Task to update not found task_id=%s by user_id=%s", id, request.user.id)
-            return create_response(
-                status=http_status.HTTP_404_NOT_FOUND,
-                message="Task not found."
-            )
         
-        try:
+        
             title = request.data.get("title")
             due_date = request.data.get("due_date")
             status = request.data.get("status")
+            description = request.data.get("description")
             
-            # if title and task.objects.filter(title=title, user=request.user).exists():
-            #     logger.warning("Task update failed - title '%s' already exists (task_id=%s) by user_id=%s", title, id, request.user.id)
-            #     return create_response(
-            #         status=http_status.HTTP_400_BAD_REQUEST,
-            #         message="Title Already exists."
-            #     )
+
+            if not description:
+                request.data['description'] = task_obj.description
             
             if status not in dict(task.STATUS_CHOICES).keys():
                     logger.warning("Invalid status '%s' for task update task_id=%s by user_id=%s", status, id, request.user.id)
@@ -180,6 +179,13 @@ class TaskView(viewsets.ViewSet):
                     status=http_status.HTTP_400_BAD_REQUEST,
                     message=serializer.errors
                 )
+            
+        except task.DoesNotExist:
+            logger.warning("Task to update not found task_id=%s by user_id=%s", id, request.user.id)
+            return create_response(
+                status=http_status.HTTP_404_NOT_FOUND,
+                message="Task not found."
+            )
         
         except Exception as e:
             logger.error("Exception on task updation task_id=%s by user_id=%s: %s", id, request.user.id, e, exc_info=True)
@@ -198,7 +204,7 @@ class TaskView(viewsets.ViewSet):
             
             logger.info("Task deleted successfully task_id=%s by user_id=%s", id, request.user.id)
             return create_response(
-                status=http_status.HTTP_204_NO_CONTENT,
+                status=http_status.HTTP_200_OK,
                 message="Task deleted successfully.",
                 result={}
             )
