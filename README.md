@@ -1,7 +1,7 @@
 # To-Do List App
 
 A simple and efficient **To-Do List application** built to help users manage daily tasks with ease.  
-This project demonstrates clean UI/UX, CRUD operations, and organized code architecture.
+This project demonstrates clean design, CRUD operations, tests, and organized code architecture.
 
 ---
 
