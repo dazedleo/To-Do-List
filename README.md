@@ -7,9 +7,10 @@ This project demonstrates clean design, CRUD operations, tests, and organized co
 
 ## Features
 
+-  Signup  
+-  Login
 -  Add new tasks  
 -  Edit existing tasks  
--  Mark tasks as completed  
 -  Delete tasks  
 -  Persistent storage (localStorage / backend API)  
 -  Responsive design  
