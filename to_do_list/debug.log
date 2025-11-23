@@ -3585,3 +3585,52 @@ Not Found: /api/tasks/destroy-task/
 Internal Server Error: /api/tasks/destroy-task/
 Not Found: /api/tasks/destroy-task/
 Internal Server Error: /api/tasks/destroy-task/
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 687
+"GET //api/tasks/list-of-task/?status=all HTTP/1.1" 200 638
+"GET / HTTP/1.1" 200 687
+"GET //api/tasks/list-of-task/?status=all HTTP/1.1" 200 638
+"GET / HTTP/1.1" 200 687
+"GET //api/tasks/list-of-task/?status=all HTTP/1.1" 200 638
+"GET / HTTP/1.1" 200 687
+"GET //api/tasks/list-of-task/?status=all HTTP/1.1" 200 638
+"GET / HTTP/1.1" 200 687
+"GET //api/tasks/list-of-task/?status=all HTTP/1.1" 200 638
+"GET / HTTP/1.1" 200 687
+"GET //api/tasks/list-of-task/?status=all HTTP/1.1" 200 638
+"GET / HTTP/1.1" 200 687
+"GET //api/tasks/list-of-task/?status=all HTTP/1.1" 200 638
+"GET / HTTP/1.1" 200 687
+"GET //api/tasks/list-of-task/?status=all HTTP/1.1" 200 638
+"GET / HTTP/1.1" 200 687
+"GET //api/tasks/list-of-task/?status=all HTTP/1.1" 200 638
+"GET / HTTP/1.1" 200 687
+"GET //api/tasks/list-of-task/?status=all HTTP/1.1" 200 638
+"GET / HTTP/1.1" 200 687
+"GET //api/tasks/list-of-task/?status=all HTTP/1.1" 200 638
+"GET //api/tasks/list-of-task/?status=all HTTP/1.1" 200 638
+"GET //api/tasks/list-of-task/?status=not_started HTTP/1.1" 200 210
+"GET //api/tasks/list-of-task/?status=in_progress HTTP/1.1" 200 367
+"GET //api/tasks/list-of-task/?status=completed HTTP/1.1" 200 75
+"OPTIONS //api/tasks/list-of-task/?status=canceled HTTP/1.1" 200 0
+"GET //api/tasks/list-of-task/?status=canceled HTTP/1.1" 200 207
+"GET //api/tasks/list-of-task/?status=all HTTP/1.1" 200 638
+"OPTIONS //api/tasks/retrieve-task/?task_id=7771ba98-0438-4ce7-9c3f-85ce5180ae4f HTTP/1.1" 200 0
+"GET //api/tasks/retrieve-task/?task_id=7771ba98-0438-4ce7-9c3f-85ce5180ae4f HTTP/1.1" 200 206
+"GET //api/tasks/list-of-task/?status=all HTTP/1.1" 200 638
+"GET / HTTP/1.1" 200 687
+"OPTIONS //api/accounts/login/ HTTP/1.1" 200 0
+Unauthorized: /api/accounts/login/
+"POST //api/accounts/login/ HTTP/1.1" 401 51
+Unauthorized: /api/accounts/login/
+"POST //api/accounts/login/ HTTP/1.1" 401 51
+"OPTIONS //api/accounts/signup/ HTTP/1.1" 200 0
+"POST //api/accounts/signup/ HTTP/1.1" 201 757
+"POST //api/accounts/login/ HTTP/1.1" 200 671
+"GET //api/tasks/list-of-task/?status=all HTTP/1.1" 200 75
+"OPTIONS //api/tasks/create-task/ HTTP/1.1" 200 0
+"POST //api/tasks/create-task/ HTTP/1.1" 201 221
+"GET //api/tasks/list-of-task/?status=all HTTP/1.1" 200 223
+D:\To-Do-List\to_do_list\to_do_list\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
