@@ -3585,33 +3585,3 @@ Not Found: /api/tasks/destroy-task/
 Internal Server Error: /api/tasks/destroy-task/
 Not Found: /api/tasks/destroy-task/
 Internal Server Error: /api/tasks/destroy-task/
-Not Found: /api/accounts/login/
-Not Found: /api/accounts/login/
-Unauthorized: /api/accounts/login/
-Not Found: /api/accounts/login/
-Unauthorized: /api/accounts/login/
-Internal Server Error: /api/accounts/login/
-Bad Request: /api/accounts/signup/
-Bad Request: /api/accounts/signup/
-Bad Request: /api/accounts/signup/
-Bad Request: /api/accounts/signup/
-Bad Request: /api/accounts/signup/
-Bad Request: /api/accounts/signup/
-Internal Server Error: /api/accounts/signup/
-Bad Request: /api/tasks/create-task/
-Bad Request: /api/tasks/create-task/
-Bad Request: /api/tasks/create-task/
-Bad Request: /api/tasks/create-task/
-Internal Server Error: /api/tasks/create-task/
-Not Found: /api/tasks/destroy-task/
-Internal Server Error: /api/tasks/destroy-task/
-Bad Request: /api/tasks/list-of-task/
-Internal Server Error: /api/tasks/list-of-task/
-Not Found: /api/tasks/retrieve-task/
-Not Found: /api/tasks/retrieve-task/
-Internal Server Error: /api/tasks/retrieve-task/
-Not Found: /api/tasks/update-task/
-Bad Request: /api/tasks/update-task/
-Bad Request: /api/tasks/update-task/
-Bad Request: /api/tasks/update-task/
-Internal Server Error: /api/tasks/update-task/
