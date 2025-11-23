@@ -26,16 +26,13 @@ STATICFILES_DIRS = [
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  
 
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
-
-
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-x+grri%m+(qyr)j_6=i4b5468(q=a&uqk((0+q_y(c3ku=g$#v'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["to-do-list-3-i9cn.onrender.com",".onrender.com","127.0.0.1"]
+ALLOWED_HOSTS = ["to-do-list-3-i9cn.onrender.com",".onrender.com"]
 
 CORS_ALLOW_ALL_ORIGINS = True 
 
@@ -58,7 +55,6 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
