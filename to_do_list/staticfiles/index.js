@@ -1,9 +1,9 @@
 let API_BASE;
 
 if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
-    API_BASE = "http://localhost:8000/";
+    API_BASE = "http://localhost:8000";
 } else {
-    API_BASE = "https://to-do-list-3-i9cn.onrender.com/";
+    API_BASE = "https://to-do-list-3-i9cn.onrender.com";
 }
 
 const app = document.getElementById('app');
