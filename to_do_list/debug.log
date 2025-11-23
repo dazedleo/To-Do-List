@@ -3634,3 +3634,47 @@ Unauthorized: /api/accounts/login/
 D:\To-Do-List\to_do_list\to_do_list\settings.py changed, reloading.
 Watching for file changes with StatReloader
 Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 687
+"GET //api/tasks/list-of-task/?status=all HTTP/1.1" 200 223
+"GET / HTTP/1.1" 200 687
+"GET / HTTP/1.1" 200 687
+"POST //api/accounts/login/ HTTP/1.1" 200 671
+"GET //api/tasks/list-of-task/?status=all HTTP/1.1" 200 223
+"GET //api/tasks/list-of-task/?status=all HTTP/1.1" 200 223
+"GET //api/tasks/list-of-task/?status=not_started HTTP/1.1" 200 75
+"GET //api/tasks/list-of-task/?status=in_progress HTTP/1.1" 200 223
+"GET //api/tasks/list-of-task/?status=completed HTTP/1.1" 200 75
+"GET //api/tasks/list-of-task/?status=canceled HTTP/1.1" 200 75
+"GET //api/tasks/list-of-task/?status=all HTTP/1.1" 200 223
+"OPTIONS //api/tasks/retrieve-task/?task_id=d6921c03-d690-4a8a-a1d9-a690f69bfb75 HTTP/1.1" 200 0
+"GET //api/tasks/retrieve-task/?task_id=d6921c03-d690-4a8a-a1d9-a690f69bfb75 HTTP/1.1" 200 219
+"OPTIONS //api/tasks/update-task/?task_id=d6921c03-d690-4a8a-a1d9-a690f69bfb75 HTTP/1.1" 200 0
+"PUT //api/tasks/update-task/?task_id=d6921c03-d690-4a8a-a1d9-a690f69bfb75 HTTP/1.1" 200 223
+"GET //api/tasks/list-of-task/?status=all HTTP/1.1" 200 223
+"GET //api/tasks/list-of-task/?status=not_started HTTP/1.1" 200 223
+"GET //api/tasks/list-of-task/?status=not_started HTTP/1.1" 200 223
+"GET //api/tasks/list-of-task/?status=all HTTP/1.1" 200 223
+"GET //api/tasks/list-of-task/?status=not_started HTTP/1.1" 200 223
+"GET //api/tasks/list-of-task/?status=in_progress HTTP/1.1" 200 75
+"GET //api/tasks/list-of-task/?status=not_started HTTP/1.1" 200 223
+"GET //api/tasks/retrieve-task/?task_id=d6921c03-d690-4a8a-a1d9-a690f69bfb75 HTTP/1.1" 200 219
+"PUT //api/tasks/update-task/?task_id=d6921c03-d690-4a8a-a1d9-a690f69bfb75 HTTP/1.1" 200 223
+"GET //api/tasks/list-of-task/?status=all HTTP/1.1" 200 223
+"GET //api/tasks/list-of-task/?status=all HTTP/1.1" 200 223
+"GET //api/tasks/list-of-task/?status=not_started HTTP/1.1" 200 75
+"GET //api/tasks/list-of-task/?status=in_progress HTTP/1.1" 200 223
+"GET //api/tasks/list-of-task/?status=not_started HTTP/1.1" 200 75
+"GET //api/tasks/list-of-task/?status=in_progress HTTP/1.1" 200 223
+"GET //api/tasks/list-of-task/?status=all HTTP/1.1" 200 223
+"GET / HTTP/1.1" 200 687
+"GET //api/tasks/list-of-task/?status=all HTTP/1.1" 200 223
+"GET / HTTP/1.1" 200 687
+D:\To-Do-List\to_do_list\to_do_list\settings.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 687
+"POST //api/accounts/login/ HTTP/1.1" 200 671
+"GET //api/tasks/list-of-task/?status=all HTTP/1.1" 200 223
+"GET //api/tasks/list-of-task/?status=all HTTP/1.1" 200 223
+"GET //api/tasks/list-of-task/?status=all HTTP/1.1" 200 223
+"GET //api/tasks/list-of-task/?status=not_started HTTP/1.1" 200 75
+"GET //api/tasks/list-of-task/?status=in_progress HTTP/1.1" 200 223
