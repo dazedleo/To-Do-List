@@ -35,6 +35,9 @@ This project demonstrates clean design, CRUD operations, tests, and organized co
 # Clone the repository
 git clone https://github.com/dazedleo/To-Do-List.git
 
+# Virtual Environment Activation
+.\tdvenv\Scripts\activate
+
 # Navigate into the project
 cd to_do_list
 
