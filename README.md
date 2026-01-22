@@ -50,4 +50,7 @@ py manage.py runserver
 # Run the Tests
 pytest
 
+# Deployed on Render.com (URL)
+https://to-do-list-3-i9cn.onrender.com
+
 
